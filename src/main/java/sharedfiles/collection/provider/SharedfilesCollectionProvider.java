@@ -50,7 +50,7 @@ public class SharedfilesCollectionProvider implements InfoCollectionProvider<Ass
         ServiceContext serviceContext = ServiceContextThreadLocal.getServiceContext();
         HttpServletRequest httpServletRequest = serviceContext.getRequest();
         ThemeDisplay themeDisplay = (ThemeDisplay) httpServletRequest.getAttribute(WebKeys.THEME_DISPLAY);
-
+        //themeDisplay.getUser().getAddresses().get(0).getz
         List<SharingEntry> sharedEntries = _sharingEntryLocalService.getToUserSharingEntries(themeDisplay.getUser().getUserId());
         System.out.println(sharedEntries.size());
         List<AssetEntry> assetEntries = new ArrayList<>();
